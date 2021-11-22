@@ -1,0 +1,68 @@
+package com.company;
+
+import java.io.Serializable;
+
+// === Student === //
+
+public class Student implements Serializable {
+    private Long id;
+    private String name;
+    private String surname;
+    private int age;
+
+    public Student(){
+        this.name = "no name";
+        this.surname = "no surname";
+        this.age = -1;
+    }
+
+    public Student(Long id,String name,String surname, int age){
+        this.surname=surname;
+        this.id=id;
+        this.name=name;
+        this.age = age;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", age=" + age +
+                '}';
+    }
+}
+
